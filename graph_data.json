@@ -1,0 +1,28 @@
+{
+ "Cities": {
+  "Detroit": {"lat": 42.3314,"long": -83.0458},
+  "Pontiac": {"lat": 42.6389,"long": -83.2910},
+  "Flint": {"lat": 43.0125,"long": -83.6875},
+  "Lansing": {"lat": 42.7325,"long": -84.5555},
+  "Ann Arbor": {"lat": 42.2808,"long": -83.7430},
+  "Battle Creek": {"lat": 42.3212,"long": -85.1797},
+  "Grand Rapids": {"lat": 42.9634,"long": -85.6681},
+  "Muskegon": {"lat": 43.2340,"long": -86.2484},
+  "Traverse City": {"lat": 44.7631,"long": -85.6206},
+  "Cheboygan": {"lat": 45.6469,"long": -84.4741},
+  "Marquette": {"lat": 46.5476,"long": -87.3955}
+},
+"Distances": {
+    "Detroit": {"Ann Arbor": 43, "Flint": 67,"Lansing": 92},
+    "Pontiac": {"Detroit":  31,"Flint": 33},
+    "Flint": {"Lansing": 50, "Pontiac": 33,"Detroit": 67},
+    "Lansing": {"Ann Arbor": 65,"Flint": 60,"Battle Creek": 50,"Grand Rapids": 68},
+    "Ann Arbor": {"Detroit": 43,"Lansing": 65,"Battle Creek": 79},
+    "Battle Creek": {"Grand Rapids": 62,"Lansing": 50,"Ann Arbor": 79},
+    "Grand Rapids": {"Muskegon": 40,"Battle Creek": 62,"Traverse City": 140,"Lansing":  68},
+    "Muskegon": {"Grand Rapids": 42},
+    "Traverse City": {"Cheboygan": 92,"Grand Rapids": 140},
+    "Cheboygan": {"Traverse City": 90,"Marquette":  200},
+    "Marquette": {"Cheboygan": 200}
+}
+}
