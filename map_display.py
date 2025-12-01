@@ -20,7 +20,7 @@ CITY_PIXELS = {
 def build_map_figure(G, path1=None, path2=None, map_path="michigan_map.png"):
     img = mpimg.imread(map_path)
 
-    fig, ax = plt.subplots(figsize=(6, 4))
+    fig, ax = plt.subplots(figsize=(8, 10))
 
     #show image and fill
     ax.imshow(img)
