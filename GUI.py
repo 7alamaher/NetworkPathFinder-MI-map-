@@ -15,7 +15,8 @@ def create_gui(G):
 
     #map display
     map_frame = tk.Frame(window)
-    map_frame.pack(pady=10)
+    map_frame.pack(side="left", padx=90,pady=10)
+
 
     #creates the initial blank map with no paths
     fig = build_map_figure(G, None, None)
@@ -26,7 +27,10 @@ def create_gui(G):
     #start and goal
     cities = list(G.nodes())
 
-    sg_frame = tk.Frame(window)
+    right_frame = tk.Frame(window)
+    right_frame.pack(side="right", fill="y", padx=150,pady=200)
+
+    sg_frame = tk.Frame(right_frame)
     sg_frame.pack(pady=10)
 
     tk.Label(sg_frame, text="Start City:", font=("Arial", 12)).grid(row=0, column=0, padx=10)
@@ -38,7 +42,7 @@ def create_gui(G):
     goal_cb.grid(row=1, column=1, padx=10)
 
 
-    output = tk.Text(window, height=27, width=90)
+    output = tk.Text(right_frame, height=27, width=90)
     output.pack(pady=10)
 
     def run_dijkstra_compare():
@@ -110,6 +114,15 @@ def create_gui(G):
         )
 
     #compare Button
-    ttk.Button(window, text="Show Paths", command=run_dijkstra_compare).pack(pady=1)
+    style = ttk.Style()
+    style.configure("BigButton.TButton", font=("Arial", 15))
+
+    ttk.Button(
+        right_frame,
+        text="Show Paths",
+        command=run_dijkstra_compare,
+        width=10,
+        style="BigButton.TButton"
+    ).pack(pady=15, ipadx=5, ipady=8)
 
     window.mainloop()
