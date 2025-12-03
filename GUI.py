@@ -10,7 +10,7 @@ from map_display import build_map_figure
 def create_gui(G):
 
     window = tk.Tk()
-    window.title("Dijkstra Path Comparison")
+    window.title("Michigan Path-Finding")
     window.geometry("800x1200")
 
     # map Display
