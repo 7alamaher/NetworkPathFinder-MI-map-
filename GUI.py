@@ -105,23 +105,13 @@ def create_gui(G):
             f"- Difference: {dist2 - dist1} miles\n\n"
         )
 
-        output.insert(tk.END, "Growth Rate / Efficiency \n"
-                              f"Nodes Expanded (Shortest Path): {nodes1}\n"
-                              f"Nodes Expanded (Second Best Path): {nodes2}\n"
-                              "Complexity: O((V + E) log V)\n\n")
-
         output.insert(tk.END,
-        "VALID PATH CHECK:\n")
+        f"Nodes Expanded (Shortest Path): {nodes1}\n"
+            f"Nodes Expanded (Second Best Path): {nodes2}\n"
+            "Complexity: O((V + E) log V)\n\n")
 
-        if goal not in G[start]:
-            output.insert(tk.END, f"Invalid path between {start} and {goal}.\n")
-            output.insert(tk.END, "However, a valid route DOES exist:\n")
-            output.insert(tk.END, f"{' → '.join(p1)} ✓ \n")
-            output.insert(tk.END, f"{' → '.join(p2)} ✓ \n")
-        else:
-            output.insert(tk.END, f"{' → '.join(p1)} ✓ \n")
-            output.insert(tk.END, f"{' → '.join(p2)} ✓ \n")
-
+        output.insert(tk.END,f"Optimal Path:\n")
+        output.insert(tk.END, " → ".join(p1) + "\n")
     #show Paths Button
     style = ttk.Style()
     style.configure("BigButton.TButton", font=("Arial", 13))

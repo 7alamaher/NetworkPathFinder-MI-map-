@@ -43,7 +43,7 @@ def build_map_figure(G, path1=None, path2=None, invalid_pair=None, map_path="mic
 
         ax.plot(
             [x1, x2], [y1, y2],
-            color="red",
+            color="yellow",
             linestyle=":",
             linewidth=2,
             label="Invalid path"
